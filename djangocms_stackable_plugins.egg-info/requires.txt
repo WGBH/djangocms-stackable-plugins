@@ -1,0 +1,3 @@
+pytz
+djangocms-attributes-field
+django-colorfield
