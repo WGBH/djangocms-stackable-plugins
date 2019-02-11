@@ -1,0 +1,11 @@
+{% extends "feature_plugin_base.html" %}
+{% load thumbnail cms_tags %}
+
+{% block plugin-block %}
+    <h1 class="xl">{{ instance.title }}</h1>
+    <div class="three-across clearfix">
+        {% for plugin in instance.child_plugin_instances %}
+            {% render_plugin plugin %}
+        {% endfor %}
+    </div>
+{% endblock %}

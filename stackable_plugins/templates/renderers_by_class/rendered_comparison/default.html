@@ -1,0 +1,20 @@
+{% load thumbnail %}
+<div class="plugin-block">
+    <div class="compared_thing compared_thing_left">
+        <h2>{{ item.title_left }}</h2>
+        <img src="{% thumbnail item.image_left 250x250 %}"/>
+        {{ item.body_left|safe }}
+    </div>
+    
+    {% if item.conjunction %}
+    <div class="middle_thing">
+        {{ item.get_conjunction_display }}
+    </div>
+    {% endif %}
+    
+    <div class="compared_thing compared_thing_right">
+        <h2>{{ item.title_right }}</h2>
+        <img src="{% thumbnail item.image_right 250x250 %}"/>
+        {{ item.body_right|safe }}
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{% extends "feature_plugin_base.html" %}
+{% load thumbnail cms_tags %}
+
+{% comment %}
+    ANY styling here should be removed during "real" front-end development.
+    It only exists to show proof-of-concept.
+{% endcomment %}
+
+{% block plugin-block %}
+    <h1 class="xl">{{ instance.title }}</h1>
+    <div class="two-across clearfix">
+        {% for plugin in instance.child_plugin_instances %}
+            {% render_plugin plugin %}
+        {% endfor %}
+    </div>
+{% endblock %}

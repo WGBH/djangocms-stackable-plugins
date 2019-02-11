@@ -1,0 +1,27 @@
+{% load thumbnail %}
+<!-- <div class="plugin-block">
+    <table>
+        <tr>
+            <td width="30%" valign="top">
+                <img src="{% thumbnail item.headshot 350x250 %}"/>
+            </td>
+            <td width="20%">&nbsp;</td>
+            <td width="50%" valign="top">
+                <h3>{{ item.name }}</h3>
+                {% if item.byline %}<small>{{ item.byline }}</small>{% endif %}
+                <br/>
+                {{ item.text_block|safe }}
+            </td>
+        </tr>
+    </table>
+</div> -->
+
+ <div class="staff">
+    <div class="photo"><img class="staff-photo" src="{% thumbnail item.headshot 350x250 %}"></div>
+    <div class="bio">
+        <h3>{{ item.name }}</h2>
+        {% if item.byline %}<h6>{{ item.byline }}</h6>{% endif %}
+
+        {{ item.text_block|safe }}
+    </div>
+</div>

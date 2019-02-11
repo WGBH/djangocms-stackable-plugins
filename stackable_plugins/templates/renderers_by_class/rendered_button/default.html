@@ -1,0 +1,4 @@
+
+<a {% if instance.css_class %}class="{{ instance.css_class }}"{% endif %} style="{{ instance.attributes_as_style }}" href="{{ instance.get_link }}" {% if instance.target %}target="{{ instance.target }}"{% endif %}>
+  {{ instance.title }}
+</a>

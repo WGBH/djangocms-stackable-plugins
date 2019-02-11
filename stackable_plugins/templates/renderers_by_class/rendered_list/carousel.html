@@ -1,0 +1,17 @@
+{% extends "feature_plugin_base.html" %}
+{% load thumbnail cms_tags %}
+
+{% block plugin-block %}
+        
+    <div class="wrapper slideshow-wrapper home">
+        <div class="slideshow home">
+            {% for plugin in instance.child_plugin_instances %}            
+                {% render_plugin plugin %}            
+            {% endfor %}
+        </div>
+<!--         <div class="left"><img src="/static/images/arrow-carousel-left.svg"></div>
+        <div class="right"><img src="/static/images/arrow-carousel-right.svg"></div> -->
+    </div>
+
+{% endblock %}
+

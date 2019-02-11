@@ -1,0 +1,25 @@
+{% comment %}
+<!-->div class="clock-section">
+  <div id="countdown-{{ instance.pk }}" class="js-clock countdown" data-countDownTime='{{ instance.zero_date_time|date:"M d, Y H:i:s" }}' aria-hidden="true"></div>
+  <span class="gamma promo-text">{{ instance.label }}</span>
+</div-->
+{% endcomment %}
+
+
+<div class="clock-section">
+<h2>Countdown clock #{{ instance.pk }}: {{ instance.title }}</h2>
+  <div id="countdown-{{ instance.pk }}" class="js-clock countdown">
+    Set for: {{ instance.zero_date_time|date:"M d, Y H:i:s" }}
+    (unix time: {{ unixtime }}; now = {{ unixtime_now }})
+    <br/>
+    {% if in_the_past %} Happened: {% else %} In: {% endif %}
+    {{ delta_seconds }} seconds =
+    {{ t_minus_days }} days,
+    {{ t_minus_hours }} hours,
+    {{ t_minus_minutes }} minutes,
+    {{ t_minus_seconds }} seconds,
+    {% if in_the_past %} ago. {% else %} from now. {% endif %}
+  </div>
+  <br/>
+  <span class="gamma promo-text">{{ instance.label }}</span>
+</div>
