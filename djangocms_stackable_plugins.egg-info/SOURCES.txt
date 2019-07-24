@@ -1,6 +1,6 @@
 LICENSE
 MANIFEST.in
-README.rst
+README.md
 setup.cfg
 setup.py
 djangocms_stackable_plugins.egg-info/PKG-INFO
