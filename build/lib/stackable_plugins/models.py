@@ -90,6 +90,7 @@ class GenericSeparatorPlugin(BaseAbstractPlugin, BaseObjectWithStyleAttributes):
         null = True, blank = True,
         related_name = 'separator_image',
         help_text = 'If you want an image to be used, add it here (can be an icon or a banner)'
+        on_delete = models.CASCADE
     )
     
     
