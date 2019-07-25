@@ -325,6 +325,7 @@ class BiographyPlugin(BaseAbstractPlugin):
     headshot = FilerImageField ( 
         null = True,
         blank = True,
+        on_delete = models.CASCADE
     )
     name = models.CharField (
         _('Name'),
@@ -377,7 +378,7 @@ class CompareTwoThingsPlugin(BaseAbstractPlugin):
         null = False,
     )
     image_left = FilerImageField(
-        null = False, related_name = 'left_image'
+        null = False, related_name = 'left_image', on_delete = models.CASCADE
     )
     body_left = HTMLField(configuration='CKEDITOR_HTMLFIELD_SETTINGS')
 
@@ -394,7 +395,7 @@ class CompareTwoThingsPlugin(BaseAbstractPlugin):
         null = False
     )
     image_right = FilerImageField(
-        null = False, related_name = 'right_image'
+        null = False, related_name = 'right_image', on_delete = models.CASCADE
     )
     body_right = HTMLField(configuration='CKEDITOR_HTMLFIELD_SETTINGS')
 

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: djangocms-stackable-plugins
-Version: 0.2.4
+Version: 0.2.5
 Summary: DjangoCMS plugins designed for content producers.
 Home-page: http://github.com/wgbh/django-stackable-plugins/
 Author: Bob Donahue
