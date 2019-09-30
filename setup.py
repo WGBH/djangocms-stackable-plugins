@@ -19,7 +19,9 @@ setup(
     url='http://github.com/wgbh/django-stackable-plugins/',
     author='Bob Donahue',
     author_email='bob_donahue@wgbh.org',
-    install_requires=['pytz','djangocms-attributes-field', 'django-colorfield'],
+    install_requires=[
+        'pytz', 'djangocms-attributes-field', 'django-colorfield'
+    ],
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Environment :: Web Environment',
@@ -42,6 +44,3 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
 )
-
-
-
