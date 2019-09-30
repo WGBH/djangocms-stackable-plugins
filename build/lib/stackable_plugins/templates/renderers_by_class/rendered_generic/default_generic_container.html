@@ -1,0 +1,15 @@
+{% load cms_tags %}
+
+{% if instance.external_background_image %}
+<div style="background-image: url('{{ instance.external_background_image }}')">
+{% elif instance.background_image %}
+<div style="background-image: url('{{ instance.background_image.url }}')">
+{% elif instance.background_color %}
+<div style="background-color: {{ instance.background_color }}">
+{% else %}
+<div>
+{% endif %}
+  {% for plugin in instance.child_plugin_instances %}
+    {% render_plugin plugin %}
+  {% endfor %}
+</div>

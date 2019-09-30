@@ -1,0 +1,4 @@
+<figure>
+  <span class="media-container"><img src="{{ MEDIA_URL }}/{{ item.main_image }}"/></span>
+  <figcaption>{{ item.caption|safe}}<span>{% if item.credit %}(Credit: {{ item.credit }}){% endif %}</span></figcaption>
+</figure>

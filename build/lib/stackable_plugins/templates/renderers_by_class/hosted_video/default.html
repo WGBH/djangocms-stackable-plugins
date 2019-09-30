@@ -1,0 +1,17 @@
+<div class="video-wrapper">
+{% if item.host.slug == 'cove' %}
+    <div class="cove-container">
+    <iframe id='partnerPlayer' frameborder='0' src='https://video.pbs.org/widget/partnerplayer/{{ item.id_on_service }}/?end=0&autoplay=true&topbar=false&start=0&endscreen=true' width="640" height="360" allowfullscreen></iframe>
+  </div>
+
+{% elif item.host.slug == 'youtube' %}
+    <div class="youtube-container">
+        <iframe frameborder="0" src="https://www.youtube.com/embed/{{ item.id_on_service }}?rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+{% else %}
+    I don't know how to render {{ item.host.title }} videos.
+{% endif %}
+</div>
+
+

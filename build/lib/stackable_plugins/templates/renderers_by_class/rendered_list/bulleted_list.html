@@ -1,0 +1,26 @@
+{% extends "feature_plugin_base.html" %}
+{% load thumbnail cms_tags %}
+
+{% comment %}
+    ANY styling here should be removed during "real" front-end development.
+    It only exists to show proof-of-concept.
+{% endcomment %}
+
+
+{% block plugin-block %}
+<div class="plugin-list-block">
+    <div class="plugin parent">
+        <h3 class="beta">{{ instance.title }}</h3>
+        
+        <ul>
+        {% for plugin in instance.child_plugin_instances %}
+            <li class="rendered-list-item-bullet-item">Plugin is: {{ plugin.get_plugin_name }} = {{ plugin.plugin_type }} </li>
+        {% empty %}
+            <li>I do not appear to have any list items...   So why am I here?</li>
+        {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+{% endblock %}
+

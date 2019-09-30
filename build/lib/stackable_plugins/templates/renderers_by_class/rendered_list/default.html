@@ -1,0 +1,12 @@
+{% load thumbnail cms_tags %}
+
+<div class="plugin-list-block">
+  <h3 class="beta">{{ instance.title }}</h3>
+  <ul> 
+  {% for plugin in instance.child_plugin_instances %}
+    <li> 
+      {% render_plugin plugin %}
+    </li> 
+  {% endfor %}
+  </ul>       
+</div>
