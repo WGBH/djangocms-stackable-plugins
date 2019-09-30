@@ -15,7 +15,7 @@ setup(
     license='MIT License, see LICENSE',
     description="DjangoCMS plugins designed for content producers.",
     long_description=README,
-    long_description_content_type="text/markdown",
+    long_description_content_type='text/markdown',
     url='http://github.com/wgbh/django-stackable-plugins/',
     author='Bob Donahue',
     author_email='bob_donahue@wgbh.org',
